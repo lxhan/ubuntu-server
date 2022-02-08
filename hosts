@@ -1,0 +1,2 @@
+[home]
+srv ansible_host=xxx.xxx.xx.xxx ansible_user=lx ansible_connection=ssh

@@ -1,0 +1,7 @@
+username: lx
+packages:
+  - neofetch
+
+snap_packages:
+  - docker
+  - nvim
