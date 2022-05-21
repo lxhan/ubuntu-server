@@ -1,7 +1,4 @@
-username: lx
+username: ubuntu
 packages:
-  - neofetch
-
-snap_packages:
-  - docker
-  - nvim
+  - nginx
+  - jq
