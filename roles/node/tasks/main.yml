@@ -1,0 +1,23 @@
+---
+- name: Install NVM
+  become: true
+  become_user: "{{ nvm_user }}"
+  shell: |
+    NVM_VERSION=$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | jq -r '.tag_name')
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
+  args:
+    creates: "/home/{{ nvm_user }}/.nvm/nvm.sh"
+  register: nvm_result
+  changed_when: "'already installed' not in nvm_result.stdout"
+  tags: [node, nvm]
+
+- name: Install Node.js LTS
+  become: true
+  become_user: "{{ nvm_user }}"
+  shell: >
+    source ~/.nvm/nvm.sh && nvm install {{ node_version }}
+  args:
+    executable: /usr/bin/bash
+  register: node_version_response
+  changed_when: "'already installed' not in node_version_response.stderr"
+  tags: [node]

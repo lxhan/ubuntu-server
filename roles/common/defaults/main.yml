@@ -1,0 +1,4 @@
+---
+# Default variables for common configuration
+update_packages: true
+upgrade_packages: true

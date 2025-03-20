@@ -1,0 +1,8 @@
+---
+# Common variables for all environments
+username: ubuntu
+common_packages:
+  - nginx
+  - jq
+  - git
+  - ufw

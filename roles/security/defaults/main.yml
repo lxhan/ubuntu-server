@@ -1,0 +1,3 @@
+---
+# Security settings
+ssh_password_authentication: "no"

@@ -1,0 +1,4 @@
+---
+# Node.js settings
+nvm_user: "{{ username }}"
+node_version: "stable"

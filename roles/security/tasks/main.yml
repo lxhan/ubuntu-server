@@ -1,0 +1,8 @@
+---
+- name: Include SSH tasks
+  import_tasks: ssh.yml
+  tags: [security, ssh]
+
+- name: Include sudoers tasks
+  import_tasks: sudoers.yml
+  tags: [security, sudoers]

@@ -1,0 +1,29 @@
+[home]
+bee ansible_host=xx.xx.xx.xx
+x230 ansible_host=xx.xx.xx.xx
+mac ansible_host=xx.xx.xx.xx
+
+[office]
+srv1 ansible_host=xx.xx.xx.xx
+srv2 ansible_host=xx.xx.xx.xx
+
+# Server groups by function
+[webservers]
+bee
+srv1
+
+# Future Kubernetes groups
+[k8s_masters]
+# Add your future k8s master nodes here
+
+[k8s_workers]
+# Add your future k8s worker nodes here
+
+# Group relationships
+[k8s_cluster:children]
+k8s_masters
+k8s_workers
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=ubuntu

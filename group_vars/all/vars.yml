@@ -1,4 +1,0 @@
-username: ubuntu
-packages:
-  - nginx
-  - jq

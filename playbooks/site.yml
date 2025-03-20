@@ -1,0 +1,6 @@
+---
+- name: Include server setup playbook
+  import_playbook: server_setup.yml
+# Uncomment when ready to use Kubernetes
+# - name: Include Kubernetes setup playbook
+#   import_playbook: kubernetes.yml
