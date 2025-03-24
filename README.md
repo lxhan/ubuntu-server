@@ -25,15 +25,8 @@ ansible-playbook playbooks/site.yml
 ### Target Specific Environments
 
 ```bash
-ansible-playbook playbooks/site.yml --limit home
-ansible-playbook playbooks/site.yml --limit office
-```
-
-### Target Specific Server Types
-
-```bash
-ansible-playbook playbooks/site.yml --limit webservers
-ansible-playbook playbooks/site.yml --limit nodeservers
+ansible-playbook playbooks/site.yml --limit home -K
+ansible-playbook playbooks/site.yml --limit office -K
 ```
 
 ### Run Only Specific Tasks
